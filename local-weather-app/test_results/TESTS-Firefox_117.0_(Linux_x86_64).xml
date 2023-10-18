@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<testsuite name="Firefox 117.0 (Linux x86_64)" package="" timestamp="2023-10-18T04:20:25" id="0" hostname="edpccasa-Inspiron-5502" tests="4" errors="0" failures="0" time="0.033">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/117.0"/>
+  </properties>
+  <testcase name="CurrentWeatherComponent should create" time="0.021" classname="Firefox_117_0_(Linux_x86_64).CurrentWeatherComponent"/>
+  <testcase name="AppComponent should render title" time="0.008" classname="Firefox_117_0_(Linux_x86_64).AppComponent"/>
+  <testcase name="AppComponent should create the app" time="0.002" classname="Firefox_117_0_(Linux_x86_64).AppComponent"/>
+  <testcase name="WeatherService should be created" time="0.002" classname="Firefox_117_0_(Linux_x86_64).WeatherService"/>
+  <system-out>
+    <![CDATA[
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>

@@ -19,6 +19,10 @@ interface ICurrentWeatherData {
   name: string
 }
 
+export interface IWeatherService {
+  getCurrentWeather(city: string, country: string): Observable<ICurrentWeather>;
+}
+
 export const defaultWeather: ICurrentWeather = {
   city: '--',
   country: '--',
@@ -31,7 +35,7 @@ export const defaultWeather: ICurrentWeather = {
 @Injectable({
   providedIn: 'root'
 })
-export class WeatherService {
+export class WeatherService implements IWeatherService {
 
   constructor(private httpClient: HttpClient) { }
 

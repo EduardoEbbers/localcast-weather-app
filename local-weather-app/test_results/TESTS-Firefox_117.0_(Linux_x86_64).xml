@@ -1,12 +1,14 @@
 <?xml version="1.0"?>
-<testsuite name="Firefox 117.0 (Linux x86_64)" package="" timestamp="2023-10-18T04:41:00" id="0" hostname="edpccasa-Inspiron-5502" tests="4" errors="0" failures="0" time="0.092">
+<testsuite name="Firefox 117.0 (Linux x86_64)" package="" timestamp="2023-10-18T16:26:55" id="0" hostname="edpccasa-Inspiron-5502" tests="6" errors="0" failures="0" time="0.159">
   <properties>
     <property name="browser.fullName" value="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/117.0"/>
   </properties>
-  <testcase name="WeatherService should be created" time="0.007" classname="Firefox_117_0_(Linux_x86_64).WeatherService"/>
-  <testcase name="CurrentWeatherComponent should create" time="0.07" classname="Firefox_117_0_(Linux_x86_64).CurrentWeatherComponent"/>
-  <testcase name="AppComponent should render title" time="0.009" classname="Firefox_117_0_(Linux_x86_64).AppComponent"/>
-  <testcase name="AppComponent should create the app" time="0.006" classname="Firefox_117_0_(Linux_x86_64).AppComponent"/>
+  <testcase name="AppComponent should create the app" time="0.049" classname="Firefox_117_0_(Linux_x86_64).AppComponent"/>
+  <testcase name="AppComponent should render title" time="0.013" classname="Firefox_117_0_(Linux_x86_64).AppComponent"/>
+  <testcase name="WeatherService should be created" time="0.005" classname="Firefox_117_0_(Linux_x86_64).WeatherService"/>
+  <testcase name="CurrentWeatherComponent should eagerly load currentWeather in Bathesda from weatherService" time="0.07" classname="Firefox_117_0_(Linux_x86_64).CurrentWeatherComponent"/>
+  <testcase name="CurrentWeatherComponent should create" time="0.012" classname="Firefox_117_0_(Linux_x86_64).CurrentWeatherComponent"/>
+  <testcase name="CurrentWeatherComponent should get currentWeather from weatherService" time="0.01" classname="Firefox_117_0_(Linux_x86_64).CurrentWeatherComponent"/>
   <system-out>
     <![CDATA[
 ]]>

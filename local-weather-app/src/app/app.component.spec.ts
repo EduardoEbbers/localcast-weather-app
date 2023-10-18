@@ -3,11 +3,18 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { CurrentWeatherComponent } from './current-weather/current-weather.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { MockComponent } from 'ng-mocks';
+import { WeatherService } from './weather/weather.service';
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    imports: [RouterTestingModule, HttpClientTestingModule],
-    declarations: [AppComponent, CurrentWeatherComponent]
+    //imports: [RouterTestingModule, HttpClientTestingModule],
+    imports: [HttpClientTestingModule, MockComponent(CurrentWeatherComponent)],
+    
+    //providers: [WeatherService],
+    
+    //declarations: [AppComponent, CurrentWeatherComponent]
+    declarations: [AppComponent]
   }).compileComponents());
 
   it('should create the app', () => {

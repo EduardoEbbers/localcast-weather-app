@@ -1,14 +1,96 @@
 <?xml version="1.0"?>
-<testsuite name="Firefox 117.0 (Linux x86_64)" package="" timestamp="2023-10-18T16:26:55" id="0" hostname="edpccasa-Inspiron-5502" tests="6" errors="0" failures="0" time="0.159">
+<testsuite name="Firefox 117.0 (Linux x86_64)" package="" timestamp="2023-10-19T17:23:58" id="0" hostname="edpccasa-Inspiron-5502" tests="6" errors="0" failures="2" time="0.175">
   <properties>
     <property name="browser.fullName" value="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/117.0"/>
   </properties>
-  <testcase name="AppComponent should create the app" time="0.049" classname="Firefox_117_0_(Linux_x86_64).AppComponent"/>
-  <testcase name="AppComponent should render title" time="0.013" classname="Firefox_117_0_(Linux_x86_64).AppComponent"/>
-  <testcase name="WeatherService should be created" time="0.005" classname="Firefox_117_0_(Linux_x86_64).WeatherService"/>
-  <testcase name="CurrentWeatherComponent should eagerly load currentWeather in Bathesda from weatherService" time="0.07" classname="Firefox_117_0_(Linux_x86_64).CurrentWeatherComponent"/>
-  <testcase name="CurrentWeatherComponent should create" time="0.012" classname="Firefox_117_0_(Linux_x86_64).CurrentWeatherComponent"/>
-  <testcase name="CurrentWeatherComponent should get currentWeather from weatherService" time="0.01" classname="Firefox_117_0_(Linux_x86_64).CurrentWeatherComponent"/>
+  <testcase name="CurrentWeatherComponent should create" time="0.109" classname="Firefox_117_0_(Linux_x86_64).CurrentWeatherComponent"/>
+  <testcase name="CurrentWeatherComponent should get currentWeather from weatherService" time="0.008" classname="Firefox_117_0_(Linux_x86_64).CurrentWeatherComponent"/>
+  <testcase name="CurrentWeatherComponent should eagerly load currentWeather in Bathesda from weatherService" time="0.01" classname="Firefox_117_0_(Linux_x86_64).CurrentWeatherComponent"/>
+  <testcase name="WeatherService should be created" time="0.006" classname="Firefox_117_0_(Linux_x86_64).WeatherService"/>
+  <testcase name="AppComponent should render title" time="0.028" classname="Firefox_117_0_(Linux_x86_64).AppComponent">
+    <failure type="">Error: NG0304: 'mat-toolbar' is not a known element (used in the 'AppComponent' component template):
+1. If 'mat-toolbar' is an Angular component, then verify that it is a part of an @NgModule where this component is declared.
+2. If 'mat-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. in vendor.js (line 45892)
+error properties: Object({ code: 304 })
+RuntimeError@vendor.js:45892:5
+validateElementIsKnown@vendor.js:51678:15
+ɵɵelementStart@vendor.js:61549:27
+AppComponent_Template@ng:///AppComponent.js:9:38
+executeTemplate@vendor.js:57421:17
+renderView@vendor.js:58564:22
+renderComponent@vendor.js:58511:13
+renderChildComponents@vendor.js:58607:20
+renderView@vendor.js:58589:28
+create@vendor.js:59469:17
+initComponent@vendor.js:103599:45
+invoke@polyfills.js:348:158
+onInvoke@vendor.js:3116:33
+invoke@polyfills.js:348:46
+onInvoke@vendor.js:56506:25
+invoke@polyfills.js:348:46
+run@polyfills.js:133:35
+run@vendor.js:56360:24
+createComponent@vendor.js:103602:37
+createComponent@vendor.js:103407:33
+9839/&lt;@vendor.js:118583:25
+7288/&lt;/&lt;@main.js:42:80
+invoke@polyfills.js:348:158
+onInvoke@vendor.js:3116:33
+invoke@polyfills.js:348:46
+run@polyfills.js:133:35
+runInTestZone@vendor.js:3382:28
+7681/&lt;/wrapTestInZone/&lt;@vendor.js:3397:14
+&lt;Jasmine&gt;
+invoke@polyfills.js:348:158
+run@polyfills.js:133:35
+6657/&lt;/scheduleResolveOrReject/&lt;@polyfills.js:1209:28
+invokeTask@polyfills.js:375:171
+runTask@polyfills.js:179:37
+drainMicroTaskQueue@polyfills.js:546:23
+</failure>
+  </testcase>
+  <testcase name="AppComponent should create the app" time="0.014" classname="Firefox_117_0_(Linux_x86_64).AppComponent">
+    <failure type="">Error: NG0304: 'mat-toolbar' is not a known element (used in the 'AppComponent' component template):
+1. If 'mat-toolbar' is an Angular component, then verify that it is a part of an @NgModule where this component is declared.
+2. If 'mat-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. in vendor.js (line 45892)
+error properties: Object({ code: 304 })
+RuntimeError@vendor.js:45892:5
+validateElementIsKnown@vendor.js:51678:15
+ɵɵelementStart@vendor.js:61549:27
+AppComponent_Template@ng:///AppComponent.js:9:38
+executeTemplate@vendor.js:57421:17
+renderView@vendor.js:58564:22
+renderComponent@vendor.js:58511:13
+renderChildComponents@vendor.js:58607:20
+renderView@vendor.js:58589:28
+create@vendor.js:59469:17
+initComponent@vendor.js:103599:45
+invoke@polyfills.js:348:158
+onInvoke@vendor.js:3116:33
+invoke@polyfills.js:348:46
+onInvoke@vendor.js:56506:25
+invoke@polyfills.js:348:46
+run@polyfills.js:133:35
+run@vendor.js:56360:24
+createComponent@vendor.js:103602:37
+createComponent@vendor.js:103407:33
+9839/&lt;@vendor.js:118583:25
+7288/&lt;/&lt;@main.js:30:80
+invoke@polyfills.js:348:158
+onInvoke@vendor.js:3116:33
+invoke@polyfills.js:348:46
+run@polyfills.js:133:35
+runInTestZone@vendor.js:3382:28
+7681/&lt;/wrapTestInZone/&lt;@vendor.js:3397:14
+&lt;Jasmine&gt;
+invoke@polyfills.js:348:158
+run@polyfills.js:133:35
+6657/&lt;/scheduleResolveOrReject/&lt;@polyfills.js:1209:28
+invokeTask@polyfills.js:375:171
+runTask@polyfills.js:179:37
+drainMicroTaskQueue@polyfills.js:546:23
+</failure>
+  </testcase>
   <system-out>
     <![CDATA[
 ]]>

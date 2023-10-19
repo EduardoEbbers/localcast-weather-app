@@ -1,4 +1,7 @@
+<!--
 <div style="text-align: center;">
+-->
+<div>
   <!--
   <h1>
     LocalCast Weather
@@ -10,9 +13,35 @@
   <div>
     Sua cidade, sua previsão, agora mesmo!
   </div>
+  <!--
   <h2>Clima Atual</h2>
+  -->
   <!--
   <div>clima atual</div>
   -->
+  <!--
   <app-current-weather></app-current-weather>
+  -->
+  <!--
+  <mat-card>
+    <h2>Clima Atual</h2>
+    <app-current-weather></app-current-weather>
+  </mat-card>
+  -->
+  <div fxLayout="row">
+    <div fxFlex></div>
+    <div fxFlex="300px">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>
+            Clima Atual
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <app-current-weather></app-current-weather>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div fxFlex></div>
+  </div>
 </div>

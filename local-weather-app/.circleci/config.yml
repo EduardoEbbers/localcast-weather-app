@@ -6,10 +6,13 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
+
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "package-lock.json" }}
+      
       - run: npm ci
+      
       # force update the webdriver
       - run: cd ./node_modules/protractor && npm i webdrivermanager@latest
       # because we use "npm ci" to install NPM dependencies
@@ -18,11 +21,13 @@ jobs:
         key: v1-dependencies-{{ checksum "package-lock.json" }}
         paths:
           - ~/.npm
+      
       - run: npm run style
       - run: npm run lint
       - run: npm run build:prod
       - run: npm run test:coverage -- --watch=false
       - run: npm run e2e
+      
       - run:
         name: Tar & Gzip compiled app
         command: tar zcf dist.tar.gz dist/local-weather-app

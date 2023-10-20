@@ -4,5 +4,6 @@
         <mat-icon matPrefix>search</mat-icon>
         <input matInput aria-label="City or Zip" [formControl]="search" />
         <mat-hint>Especificar codigo do país como 'Paris, US'</mat-hint>
+        <mat-error *ngIf="search.invalid">Digitar mais que um caracter para procurar</mat-error>
     </mat-form-field>
 </form>

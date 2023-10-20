@@ -37,7 +37,7 @@
   -->
 
   <div fxLayoutAlign="center">
-    <app-city-search></app-city-search>
+    <app-city-search (searchEvent)="doSearch($event)"></app-city-search>
   </div>
 
   <div fxLayout="row">

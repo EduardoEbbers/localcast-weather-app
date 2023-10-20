@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ICurrentWeather } from '../interfaces';
 import { WeatherService } from '../weather/weather.service';
 import { SubSink } from 'subsink';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-current-weather',
@@ -9,7 +10,8 @@ import { SubSink } from 'subsink';
   styleUrls: ['./current-weather.component.css']
 })
 export class CurrentWeatherComponent implements OnInit, OnDestroy {
-  current: ICurrentWeather;
+  //current: ICurrentWeather;
+  current$: Observable<ICurrentWeather>;
   private subscriptions = new SubSink();
 
   /*
@@ -26,7 +28,7 @@ export class CurrentWeatherComponent implements OnInit, OnDestroy {
   */
   constructor(private weatherService: WeatherService) {
     // property initialization
-
+    /*
     this.current = {
       city: '--',
       country: '--',
@@ -35,6 +37,8 @@ export class CurrentWeatherComponent implements OnInit, OnDestroy {
       temperature: 0,
       description: '--',
     }
+    */
+    this.current$ = weatherService.currrentWeather$;
     
   }
 
@@ -48,15 +52,16 @@ export class CurrentWeatherComponent implements OnInit, OnDestroy {
    this.weatherService.currrentWeather$
     .subscribe(data => this.current = data);
   */
-    
+  /*
     this.subscriptions.add(
       this.weatherService.currrentWeather$
         .subscribe(data => this.current = data)
     );
+  */
   }
-
+  
   ngOnDestroy(): void {
-    this.subscriptions.unsubscribe();
+    //this.subscriptions.unsubscribe();
   }
 
   getOrdinal(date: number) {

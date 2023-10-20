@@ -8,7 +8,7 @@ import { WeatherService } from './weather/weather.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  //currentWeather: ICurrentWeather;
+  currentWeather: ICurrentWeather | any;
 
   constructor(private weatherService: WeatherService) { }
 

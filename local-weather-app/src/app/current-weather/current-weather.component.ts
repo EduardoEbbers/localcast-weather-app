@@ -37,9 +37,13 @@ export class CurrentWeatherComponent implements OnInit {
   }
 
   ngOnInit() {
+    /*
     this.weatherService
       .getCurrentWeather('London', 'Uk')
       .subscribe(data => this.current = data);
+    */
+   this.weatherService.currrentWeather$
+    .subscribe(data => this.current = data);
   }
 
   getOrdinal(date: number) {

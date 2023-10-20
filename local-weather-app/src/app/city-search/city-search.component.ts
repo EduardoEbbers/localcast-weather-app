@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { WeatherService } from '../weather/weather.service';
+import { debounceTime } from 'rxjs';
 
 @Component({
   selector: 'app-city-search',
@@ -15,7 +16,9 @@ export class CitySearchComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.search.valueChanges.subscribe((searchValue: string) => {
+    this.search.valueChanges
+    .pipe(debounceTime(1000))
+    .subscribe((searchValue: string) => {
       if(searchValue) {
         const userInput = searchValue
           .split(',')
